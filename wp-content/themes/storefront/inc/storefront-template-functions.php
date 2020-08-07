@@ -191,9 +191,6 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 */
 	function storefront_site_branding() {
 		?>
-		<div class="site-branding">
-			<?php storefront_site_title_or_logo(); ?>
-		</div>
 		<?php
 	}
 }
@@ -269,16 +266,6 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	function storefront_secondary_navigation() {
 		if ( has_nav_menu( 'secondary' ) ) {
 			?>
-			<nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'secondary',
-							'fallback_cb'    => '',
-						)
-					);
-				?>
-			</nav><!-- #site-navigation -->
 			<?php
 		}
 	}
